@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Nosifer';
+    src: url('/assets/fonts/Nosifer/Nosifer-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/assets/fonts/Merriweather/Merriweather-Regular.ttf')
+}
+
+.merriweather {
+    font-family: 'Merriweather';
+    font-style: italic;
+}
+
+/* Toutes les images se trouvant dans des span qui se trouvent elle-m^memes dans des nav
+    font une hauteur de 20px */
+nav span img {
+    height: 20px;
+}
+
+nav h1 {
+    font-family: Nosifer;
+}
+
+nav ul {
+    list-style: none;
+}
+
+#icon {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #icon {
+        display: block;
+    }
+    #icon:before {
+        content: url('/assets/img/burger.png');
+    }
+    .active #icon:before {
+        content: url('/assets/img/fermer.png');
+    }
+    nav ul {
+        position: fixed;
+        flex-direction: column;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bs-orange);
+        text-align: center;
+        transition: 0.5s;
+    }
+    nav li {
+        padding: 3px;
+    }
+    nav.active ul{
+        top: 74px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#logo-index {
+    height: 50px;
+}
+
+nav a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+    font-family: 'Merriweather';
+    font-style: italic;
+}
+
+.logo-paw {
+    height: 20px;
+}
+
+.color-nav {
+    background-color: var(--bs-orange);
+}
+
+.btn-order {
+    color: var(--bs-orange);
+    border-color: var(--bs-orange);
+    transition: 0.5s;
+}
+.btn-order:hover {
+    border-color: var(--bs-orange);
+    background-color: var(--bs-orange);
+    color: white;
+}
+
+.btn-book {
+    background-color: var(--bs-purple);
+    color: black;
+    border-color: var(--bs-purple);
+    transition: 0.5s;
+}
+.btn-book:hover {
+    border-color: var(--bs-purple);
+    background-color: var(--bs-purple);
+    color: white;
+}
+
+.banner {
+    background: linear-gradient(rgba(27, 26, 26, 0.5), rgba(190, 182, 182, 0.5)), url('/assets/img/cat.jpg') center center fixed no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
